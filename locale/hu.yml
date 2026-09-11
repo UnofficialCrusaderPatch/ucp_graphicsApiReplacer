@@ -1,0 +1,71 @@
+general: Graphics API Replacer
+general_descr: 'Ez a modul modernebb, DirectX-et vagy OpenGL-t használó megjelenítési rendszerre vált, ami például
+  a felvételkészítő programokkal javíthatja az együttműködést. Magát a kirajzolást továbbra is a processzor végzi,
+  ezért teljesítménynövekedés nem várható.
+
+  Ezek a beállítások az ablak felbontását adják meg; a kirajzolás felbontását a játékon belüli beállítások határozzák
+  meg. A képarány a játék felbontásához igazodik, ezért a felvételeken is látható fekete sávok jelenhetnek meg.'
+window: Ablakbeállítások
+window_descr: Az ablak általános beállításai.
+window.type: Mód
+window.type_descr: A használt ablakmód.
+window.type_window: Ablak
+window.type_borderlessWindow: Keret nélküli ablak
+window.type_borderlessFullscreen: Keret nélküli teljes képernyő
+window.width: Szélesség
+window.width_descr: A játékablak szélessége.
+window.height: Magasság
+window.height_descr: A játékablak magassága.
+window.pos: Pozíció
+window.pos_descr: Az ablak kezdeti helyzete.
+window.pos_middle: Középen
+window.pos_topLeft: Bal felső
+window.pos_bottomLeft: Bal alsó
+window.pos_topRight: Jobb felső
+window.pos_bottomRight: Jobb alsó
+window.continueOutOfFocus: Folytatás a háttérben
+window.continueOutOfFocus_descr: Meghatározza, mi történjen, ha az ablak elveszíti a fókuszt.
+window.continueOutOfFocus_pause: Szünet
+window.continueOutOfFocus_continue: Folytatás
+window.continueOutOfFocus_render: Folytatás kirajzolással
+window.minimizeOnLostFocus_descr: Az ablak kis méretűre állítása a fókusz elvesztésekor.
+graphic: Grafikus API beállításai
+graphic_descr: DirectX- és OpenGL-beállítások.
+graphic.api: Grafikus API
+graphic.api_descr: A használt grafikus API.
+graphic.api_DirectX: DirectX 11
+graphic.api_OpenGL: OpenGL (elavult)
+graphic.filterLinear: Lineáris szűrés
+graphic.filterLinear_descr: Lineáris textúraszűrőt alkalmaz. Javíthatja a képet, ha az ablak és a kirajzolás felbontása
+  eltér.
+graphic.vsync: VSync
+graphic.vsync_descr: Bekapcsolja a VSync-et. A kirajzolt képkockák számát a kijelző frekvenciájára korlátozza. Hatással
+  van a térképgörgetésre, mert az részben képkockafüggő.
+graphic.waitWithGLFinish: Várakozás glFinish hívással
+graphic.waitWithGLFinish_descr: OpenGL esetén a képernyőpufferek cseréje után meghívja a glFinish függvényt. Lehet,
+  hogy nincs hatása. A beállítás később eltávolítható.
+graphic.pixFormat: Pixelformátum
+graphic.pixFormat_descr: A pixelek színformátuma. A végén mindenképpen 32 bites RGBA-ra alakul, de ez állítja be
+  a szoftveres kirajzolást. Valószínűleg az ARGB1555 a textúrák eredeti formátuma.
+graphic.pixFormat_argb1555: ARGB1555
+graphic.pixFormat_rgb565: RGB565
+graphic.debug: API-hibakeresés
+graphic.debug_descr: Bekapcsolja a hibakeresési üzeneteket. Normál használatnál legyen kikapcsolva. Legalábbis DirectX
+  esetén hibakeresési könyvtárak szükségesek.
+graphic.debug_none: Nincs
+graphic.debug_enabled: Bekapcsolva (csökkentett OpenGL-kimenet)
+graphic.debug_debugContextEnabled: OpenGL hibakeresési környezet létrehozása
+control: Vezérlés
+control_descr: A bemeneti vezérlés beállításai.
+control.clipCursor: Kurzor korlátozása
+control.clipCursor_descr: A kurzort állandóan az ablak játékterületén tartja. Egyébként ez csak lenyomott egérgomb
+  mellett történik.
+control.scrollActive: Görgetés
+control.scrollActive_descr: Bekapcsolja a képernyő szélén történő görgetést.
+control.margin: Külső görgetési sáv
+control.margin_descr: Ennyi ablakpixellel bővíti kifelé a görgetési területet azokban az ablakmódokban, amelyekben
+  nincs aktív kurzorkorlátozás.
+control.padding: Belső görgetési sáv
+control.padding_descr: Ennyi ablakpixellel bővíti befelé a görgetési területet.
+tags.interface: Kezelőfelület
+tags.tools: Eszközök

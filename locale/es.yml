@@ -1,0 +1,72 @@
+general: Graphics API Replacer
+general_descr: 'Este módulo sustituye el sistema de visualización por uno más moderno que utiliza DirectX u OpenGL,
+  lo que puede mejorar la compatibilidad, por ejemplo, con programas de grabación. El renderizado sigue realizándolo
+  la CPU, por lo que no se esperan mejoras de rendimiento.
+
+  Estas opciones establecen la resolución de la ventana; las opciones del juego determinan la resolución de renderizado.
+  La relación de aspecto depende de la resolución del juego y puede producir bandas negras que también aparecerán
+  en las grabaciones.'
+window: Opciones de ventana
+window_descr: Opciones generales de la ventana.
+window.type: Modo
+window.type_descr: Modo de ventana que se utilizará.
+window.type_window: Ventana
+window.type_borderlessWindow: Ventana sin bordes
+window.type_borderlessFullscreen: Pantalla completa sin bordes
+window.width: Anchura
+window.width_descr: Anchura de la ventana del juego.
+window.height: Altura
+window.height_descr: Altura de la ventana del juego.
+window.pos: Posición
+window.pos_descr: Determina la posición inicial de la ventana.
+window.pos_middle: Centrada
+window.pos_topLeft: Arriba a la izquierda
+window.pos_bottomLeft: Abajo a la izquierda
+window.pos_topRight: Arriba a la derecha
+window.pos_bottomRight: Abajo a la derecha
+window.continueOutOfFocus: Continuar sin foco
+window.continueOutOfFocus_descr: Define qué hace el juego cuando la ventana pierde el foco.
+window.continueOutOfFocus_pause: Pausar
+window.continueOutOfFocus_continue: Continuar
+window.continueOutOfFocus_render: Continuar y renderizar
+window.minimizeOnLostFocus_descr: Minimizar cuando la ventana pierde el foco.
+graphic: Opciones de API gráfica
+graphic_descr: Opciones de DirectX y OpenGL.
+graphic.api: API gráfica
+graphic.api_descr: API gráfica que se utilizará.
+graphic.api_DirectX: DirectX 11
+graphic.api_OpenGL: OpenGL (obsoleto)
+graphic.filterLinear: Filtrado lineal
+graphic.filterLinear_descr: Aplica un filtro lineal a las texturas. Puede mejorar la imagen si las resoluciones
+  de ventana y renderizado son diferentes.
+graphic.vsync: VSync
+graphic.vsync_descr: Activa VSync y limita los fotogramas renderizados a la frecuencia de la pantalla. Afecta al
+  desplazamiento del mapa, que depende parcialmente de los fotogramas.
+graphic.waitWithGLFinish: Esperar con glFinish
+graphic.waitWithGLFinish_descr: Llama a glFinish tras intercambiar los búferes de pantalla si se utiliza OpenGL.
+  Puede no tener ningún efecto. Esta opción podría eliminarse.
+graphic.pixFormat: Formato de píxel
+graphic.pixFormat_descr: Formato de color de los píxeles. De todos modos se convierte a RGBA de 32 bits, pero determina
+  el ajuste del renderizador por software. ARGB1555 probablemente sea el formato nativo de las texturas.
+graphic.pixFormat_argb1555: ARGB1555
+graphic.pixFormat_rgb565: RGB565
+graphic.debug: Depuración de API
+graphic.debug_descr: Activa mensajes de depuración. Debe estar desactivado para el uso normal. Al menos con DirectX,
+  requiere bibliotecas de depuración.
+graphic.debug_none: Ninguna
+graphic.debug_enabled: Activada (salida reducida para OpenGL)
+graphic.debug_debugContextEnabled: Crear contexto de depuración OpenGL
+control: Control
+control_descr: Opciones de control de entrada.
+control.clipCursor: Limitar cursor
+control.clipCursor_descr: Restringe siempre el cursor a la zona de juego de la ventana; de otro modo solo ocurre
+  al mantener pulsado un botón del ratón.
+control.scrollActive: Desplazamiento
+control.scrollActive_descr: Activa el desplazamiento en los bordes.
+control.margin: Margen exterior de desplazamiento
+control.margin_descr: Píxeles de ventana que amplían hacia fuera la zona de desplazamiento en modos sin restricción
+  activa del cursor.
+control.padding: Margen interior de desplazamiento
+control.padding_descr: Píxeles de ventana que amplían hacia dentro la zona de desplazamiento.
+tags.interface: Interfaz
+tags.tools: Herramientas

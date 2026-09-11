@@ -1,0 +1,71 @@
+general: Graphics API Replacer
+general_descr: 'Bu modül, görüntüleme sistemini DirectX veya OpenGL kullanan daha modern bir sistemle değiştirir.
+  Bu, örneğin kayıt yazılımlarıyla daha iyi uyumluluk sağlayabilir. Görüntünün kendisi hâlâ işlemcide oluşturulur;
+  bu yüzden performans artışı beklenmemelidir.
+
+  Bu seçenekler pencere çözünürlüğünü, oyun içi seçenekler ise oluşturma çözünürlüğünü belirler. En-boy oranı oyun
+  içi çözünürlüğe bağlıdır ve kayıtlarda da görünen siyah şeritler oluşabilir.'
+window: Pencere seçenekleri
+window_descr: Pencereye ilişkin genel seçenekler.
+window.type: Mod
+window.type_descr: Kullanılacak pencere modu.
+window.type_window: Pencere
+window.type_borderlessWindow: Kenarlıksız pencere
+window.type_borderlessFullscreen: Kenarlıksız tam ekran
+window.width: Genişlik
+window.width_descr: Oyun penceresinin genişliği.
+window.height: Yükseklik
+window.height_descr: Oyun penceresinin yüksekliği.
+window.pos: Konum
+window.pos_descr: Pencerenin başlangıç konumunu belirler.
+window.pos_middle: Ortada
+window.pos_topLeft: Sol üst
+window.pos_bottomLeft: Sol alt
+window.pos_topRight: Sağ üst
+window.pos_bottomRight: Sağ alt
+window.continueOutOfFocus: Odak dışında devam et
+window.continueOutOfFocus_descr: Pencere odağını kaybettiğinde oyunun ne yapacağını belirler.
+window.continueOutOfFocus_pause: Duraklat
+window.continueOutOfFocus_continue: Devam et
+window.continueOutOfFocus_render: Devam et ve görüntü oluştur
+window.minimizeOnLostFocus_descr: Pencere odağını kaybettiğinde simge durumuna küçült.
+graphic: Grafik API seçenekleri
+graphic_descr: DirectX ve OpenGL seçenekleri.
+graphic.api: Grafik API’si
+graphic.api_descr: Kullanılacak grafik API’si.
+graphic.api_DirectX: DirectX 11
+graphic.api_OpenGL: OpenGL (kullanımdan kaldırılıyor)
+graphic.filterLinear: Doğrusal filtreleme
+graphic.filterLinear_descr: Doğrusal doku filtresi uygular. Pencere ve oluşturma çözünürlüğü farklıysa görüntüyü
+  iyileştirebilir.
+graphic.vsync: VSync
+graphic.vsync_descr: VSync’i etkinleştirir. Oluşturulan kare sayısını ekran yenileme hızına sınırlar. Harita kaydırma
+  kısmen karelere bağlı olduğundan bunu da etkiler.
+graphic.waitWithGLFinish: glFinish ile bekle
+graphic.waitWithGLFinish_descr: OpenGL kullanılırken ekran tamponları değiştirildikten sonra glFinish çağırır. Hiçbir
+  etkisi olmayabilir. Bu seçenek ileride kaldırılabilir.
+graphic.pixFormat: Piksel biçimi
+graphic.pixFormat_descr: Piksel renk biçimi. Sonuç her durumda 32 bit RGBA’ya dönüştürülür; ancak bu seçim yazılımsal
+  görüntü oluşturucuyu ayarlar. ARGB1555 muhtemelen özgün doku biçimidir.
+graphic.pixFormat_argb1555: ARGB1555
+graphic.pixFormat_rgb565: RGB565
+graphic.debug: API hata ayıklama
+graphic.debug_descr: Hata ayıklama iletilerini etkinleştirir. Normal kullanımda kapalı olmalıdır. En azından DirectX
+  için hata ayıklama kitaplıkları gereklidir.
+graphic.debug_none: Yok
+graphic.debug_enabled: Etkin (OpenGL için azaltılmış çıktı)
+graphic.debug_debugContextEnabled: OpenGL hata ayıklama bağlamı oluştur
+control: Kontrol
+control_descr: Girdi kontrolü seçenekleri.
+control.clipCursor: İmleci sınırla
+control.clipCursor_descr: İmleci sürekli olarak pencerenin oyun alanıyla sınırlar. Aksi hâlde bu yalnızca fare düğmesi
+  basılıyken gerçekleşir.
+control.scrollActive: Kaydırma
+control.scrollActive_descr: Ekran kenarında kaydırmayı etkinleştirir.
+control.margin: Dış kaydırma payı
+control.margin_descr: İmleç sınırlaması etkin olmayan pencere modlarında kaydırma alanını dışarı doğru genişleten
+  pencere pikseli sayısı.
+control.padding: İç kaydırma payı
+control.padding_descr: Kaydırma alanını içeri doğru genişleten pencere pikseli sayısı.
+tags.interface: Arayüz
+tags.tools: Araçlar
