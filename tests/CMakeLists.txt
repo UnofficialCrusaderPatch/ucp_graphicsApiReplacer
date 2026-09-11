@@ -1,0 +1,6 @@
+cmake_minimum_required(VERSION 3.16)
+project(SurfaceCopyTests LANGUAGES CXX)
+enable_testing()
+add_executable(surface-copy-tests surface-copy.cpp)
+set_target_properties(surface-copy-tests PROPERTIES CXX_STANDARD 17 CXX_STANDARD_REQUIRED YES)
+add_test(NAME surface-copy COMMAND surface-copy-tests)

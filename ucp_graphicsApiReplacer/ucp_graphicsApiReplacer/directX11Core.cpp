@@ -3,6 +3,7 @@
 /****************************************************************************************************/
 
 #include "pch.h"
+#include "surfaceCopy.h"
 
 #include "directX11Core.h"
 
@@ -528,18 +529,11 @@ namespace UCPGraphicsApiReplacer
     //  Disable GPU access to the vertex buffer data.
     if (SUCCEEDED(deviceContextPtr->Map(gameTexturePtr.get(), 0, D3D11_MAP_WRITE_DISCARD, 0, &mappedResource)))
     {
-      //  Update the vertex buffer here.
-      size_t bytesOfOneLine{ static_cast<size_t>(strongTexSize.w * 2) };
-      size_t numberOfLines{ static_cast<size_t>(strongTexSize.h) };
-      unsigned short* sourceRunPtr{ backData };
-      unsigned char* destRunPtr{ (unsigned char*)mappedResource.pData };
-      for (size_t i{ 0 }; i < numberOfLines; i++)
-      {
-        memcpy(destRunPtr, sourceRunPtr, bytesOfOneLine);
-        sourceRunPtr += strongTexSize.w;
-        destRunPtr += mappedResource.RowPitch;
-      }
-      //  Re-enable GPU access to the vertex buffer data.
+      // RowPitch may include driver padding; only packed textures use one copy.
+      const size_t rowBytes{ static_cast<size_t>(strongTexSize.w) * sizeof(*backData) };
+      copySurfaceRows(mappedResource.pData, mappedResource.RowPitch,
+        backData, rowBytes, rowBytes, static_cast<size_t>(strongTexSize.h));
+      // Re-enable GPU access to the texture.
       deviceContextPtr->Unmap(gameTexturePtr.get(), 0);
     }
     else

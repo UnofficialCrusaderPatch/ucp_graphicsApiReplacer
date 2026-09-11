@@ -21,6 +21,9 @@
     <ClInclude Include="pch.h">
       <Filter>Headerdateien</Filter>
     </ClInclude>
+    <ClInclude Include="surfaceCopy.h">
+      <Filter>Headerdateien</Filter>
+    </ClInclude>
     <ClInclude Include="crusaderGraphicsApiReplacer.h">
       <Filter>Headerdateien</Filter>
     </ClInclude>

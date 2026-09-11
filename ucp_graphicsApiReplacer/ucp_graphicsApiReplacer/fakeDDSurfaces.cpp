@@ -1,5 +1,6 @@
 
 #include "pch.h"
+#include "surfaceCopy.h"
 
 #include "fakeDDClasses.h"
 
@@ -48,18 +49,16 @@ namespace UCPGraphicsApiReplacer
   void FakeDirectDraw::FakeSurface::FakeBlt(unsigned short* bltTo, int toX, int toY, int toWidth,
     unsigned short* bltFrom, int fromX, int fromY, int lenX, int lenY, int fromWidth)
   {
-    // init
+    if (lenX <= 0 || lenY <= 0)
+      return;
+
     bltFrom += fromY * fromWidth + fromX;
     bltTo += toY * toWidth + toX;
-
-    // loop
-    int cpyLen{ lenX * 2 };
-    for (int yRun{ 0 }; yRun < lenY; yRun++)
-    {
-      std::memcpy(bltTo, bltFrom, cpyLen); // all transparency seems to be handled by stronghold
-      bltFrom += fromWidth;
-      bltTo += toWidth;
-    }
+    // The backbuffer owns separate storage from offMain and offMap.
+    // Transparency and rectangle clipping have already been handled by Crusader.
+    copySurfaceRows(bltTo, static_cast<size_t>(toWidth) * sizeof(*bltTo),
+      bltFrom, static_cast<size_t>(fromWidth) * sizeof(*bltFrom),
+      static_cast<size_t>(lenX) * sizeof(*bltFrom), static_cast<size_t>(lenY));
   }
 
 
