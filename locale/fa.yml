@@ -1,0 +1,71 @@
+general: Graphics API Replacer
+general_descr: 'این ماژول سامانهٔ نمایش را با سامانه‌ای جدیدتر مبتنی بر DirectX یا OpenGL جایگزین می‌کند تا برای
+  مثال سازگاری بهتری با نرم‌افزارهای ضبط داشته باشد. خود رندر همچنان توسط پردازنده انجام می‌شود؛ بنابراین نباید
+  انتظار افزایش کارایی داشت.
+
+  این گزینه‌ها وضوح پنجره را تعیین می‌کنند و تنظیمات داخل بازی وضوح رندر را مشخص می‌کنند. نسبت تصویر به وضوح داخل
+  بازی وابسته است و ممکن است نوارهای سیاهی ایجاد کند که در ضبط نیز دیده شوند.'
+window: گزینه‌های پنجره
+window_descr: گزینه‌های عمومی مربوط به پنجره.
+window.type: حالت
+window.type_descr: حالت پنجرهٔ مورد استفاده.
+window.type_window: پنجره
+window.type_borderlessWindow: پنجرهٔ بدون حاشیه
+window.type_borderlessFullscreen: تمام‌صفحهٔ بدون حاشیه
+window.width: عرض
+window.width_descr: عرض پنجرهٔ بازی.
+window.height: ارتفاع
+window.height_descr: ارتفاع پنجرهٔ بازی.
+window.pos: موقعیت
+window.pos_descr: موقعیت آغازین پنجره را تعیین می‌کند.
+window.pos_middle: وسط
+window.pos_topLeft: بالا چپ
+window.pos_bottomLeft: پایین چپ
+window.pos_topRight: بالا راست
+window.pos_bottomRight: پایین راست
+window.continueOutOfFocus: ادامه در پس‌زمینه
+window.continueOutOfFocus_descr: رفتار بازی هنگام ازدست‌دادن تمرکز پنجره را تعیین می‌کند.
+window.continueOutOfFocus_pause: مکث
+window.continueOutOfFocus_continue: ادامه
+window.continueOutOfFocus_render: ادامه همراه با رندر
+window.minimizeOnLostFocus_descr: هنگام ازدست‌دادن تمرکز، پنجره را کمینه کن.
+graphic: گزینه‌های رابط گرافیکی
+graphic_descr: گزینه‌های DirectX و OpenGL.
+graphic.api: رابط گرافیکی
+graphic.api_descr: رابط گرافیکی مورد استفاده.
+graphic.api_DirectX: DirectX 11
+graphic.api_OpenGL: OpenGL (منسوخ)
+graphic.filterLinear: فیلتر خطی
+graphic.filterLinear_descr: فیلتر خطی بافت را اعمال می‌کند. اگر وضوح پنجره و رندر متفاوت باشد، ممکن است تصویر بهتر
+  شود.
+graphic.vsync: همگام‌سازی عمودی
+graphic.vsync_descr: VSync را فعال و تعداد فریم‌های رندرشده را به نرخ نمایشگر محدود می‌کند. چون پیمایش نقشه تا حدی
+  به فریم وابسته است، بر آن نیز اثر دارد.
+graphic.waitWithGLFinish: انتظار با glFinish
+graphic.waitWithGLFinish_descr: هنگام استفاده از OpenGL، پس از جابه‌جایی بافرهای صفحه glFinish را فراخوانی می‌کند.
+  ممکن است هیچ اثری نداشته باشد. احتمال حذف این گزینه وجود دارد.
+graphic.pixFormat: قالب پیکسل
+graphic.pixFormat_descr: قالب رنگ پیکسل. در هر صورت به RGBA سی‌ودوبیتی تبدیل می‌شود، اما این انتخاب تنظیم رندرکنندهٔ
+  نرم‌افزاری را تعیین می‌کند. ARGB1555 احتمالاً قالب اصلی بافت‌هاست.
+graphic.pixFormat_argb1555: ARGB1555
+graphic.pixFormat_rgb565: RGB565
+graphic.debug: اشکال‌زدایی رابط
+graphic.debug_descr: پیام‌های اشکال‌زدایی را فعال می‌کند. برای استفادهٔ عادی خاموش باشد. دست‌کم در DirectX به کتابخانه‌های
+  اشکال‌زدایی نیاز دارد.
+graphic.debug_none: هیچ‌کدام
+graphic.debug_enabled: فعال (خروجی کمتر برای OpenGL)
+graphic.debug_debugContextEnabled: ساخت محیط اشکال‌زدایی OpenGL
+control: کنترل
+control_descr: گزینه‌های کنترل ورودی.
+control.clipCursor: محدودکردن نشانگر
+control.clipCursor_descr: نشانگر را همواره در بخش بازیِ پنجره نگه می‌دارد؛ در غیر این صورت، این کار فقط هنگام نگه‌داشتن
+  دکمهٔ ماوس انجام می‌شود.
+control.scrollActive: پیمایش
+control.scrollActive_descr: پیمایش در لبهٔ صفحه را فعال می‌کند.
+control.margin: حاشیهٔ بیرونی پیمایش
+control.margin_descr: تعداد پیکسل‌های پنجره برای گسترش ناحیهٔ پیمایش به بیرون، در حالت‌هایی که محدودکنندهٔ نشانگر
+  فعال نیست.
+control.padding: حاشیهٔ درونی پیمایش
+control.padding_descr: تعداد پیکسل‌های پنجره برای گسترش ناحیهٔ پیمایش به داخل.
+tags.interface: رابط کاربری
+tags.tools: ابزارها

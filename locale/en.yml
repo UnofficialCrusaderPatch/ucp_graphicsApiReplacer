@@ -78,3 +78,5 @@ control.margin_descr: Window pixels to extend the scroll zone outward for window
 
 control.padding: Scroll Padding
 control.padding_descr: Window pixels to extend the scroll zone inward.
+tags.interface: Interface
+tags.tools: Tools

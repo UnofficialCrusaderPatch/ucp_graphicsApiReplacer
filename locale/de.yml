@@ -77,3 +77,5 @@ control.margin_descr: Anzahl Fensterpixel, um welche die Scrollzone nach außen 
 
 control.padding: Scroll Padding
 control.padding_descr: Anzahl Fensterpixel, um welche die Scrollzone nach innen erweitert werden soll.
+tags.interface: Oberfläche
+tags.tools: Werkzeuge

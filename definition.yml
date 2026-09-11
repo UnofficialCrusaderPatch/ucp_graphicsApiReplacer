@@ -10,8 +10,3 @@ dependencies:
 tags:
 - interface
 - tools
-capabilities:
-  files: false
-  code: true
-  configuration: false
-  options: true

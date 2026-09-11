@@ -1,0 +1,61 @@
+general: Graphics API Replacer
+general_descr: '此模块将显示系统切换为使用 DirectX 或 OpenGL 的较新系统，可改善与录屏软件等工具的兼容性。渲染本身仍由 CPU 完成，因此不应期待性能提升。
+
+  这里的选项设置窗口分辨率，游戏内的选项决定渲染分辨率。显示比例基于游戏内分辨率，因此可能出现录屏中也能看到的黑边。'
+window: 窗口选项
+window_descr: 窗口相关的常规选项。
+window.type: 模式
+window.type_descr: 使用的窗口模式。
+window.type_window: 窗口
+window.type_borderlessWindow: 无边框窗口
+window.type_borderlessFullscreen: 无边框全屏
+window.width: 宽度
+window.width_descr: 游戏窗口的宽度。
+window.height: 高度
+window.height_descr: 游戏窗口的高度。
+window.pos: 位置
+window.pos_descr: 决定窗口的初始位置。
+window.pos_middle: 居中
+window.pos_topLeft: 左上
+window.pos_bottomLeft: 左下
+window.pos_topRight: 右上
+window.pos_bottomRight: 右下
+window.continueOutOfFocus: 失去焦点后继续
+window.continueOutOfFocus_descr: 设置游戏窗口失去焦点时的行为。
+window.continueOutOfFocus_pause: 暂停
+window.continueOutOfFocus_continue: 继续
+window.continueOutOfFocus_render: 继续并渲染
+window.minimizeOnLostFocus_descr: 窗口失去焦点时最小化。
+graphic: 图形 API 选项
+graphic_descr: DirectX 和 OpenGL 的选项。
+graphic.api: 图形 API
+graphic.api_descr: 使用的图形 API。
+graphic.api_DirectX: DirectX 11
+graphic.api_OpenGL: OpenGL（已弃用）
+graphic.filterLinear: 线性过滤
+graphic.filterLinear_descr: 应用线性纹理过滤。如果窗口分辨率与渲染分辨率不同，可能改善画面。
+graphic.vsync: 垂直同步
+graphic.vsync_descr: 启用垂直同步，将渲染帧数限制为显示器刷新率。地图滚动部分依赖帧率，因此也会受到影响。
+graphic.waitWithGLFinish: 使用 glFinish 等待
+graphic.waitWithGLFinish_descr: 使用 OpenGL 时，在交换屏幕缓冲区后调用 glFinish。可能完全没有效果，将来可能移除此选项。
+graphic.pixFormat: 像素格式
+graphic.pixFormat_descr: 像素颜色格式。最终仍会转换为 32 位 RGBA，但此选项决定软件渲染器的设置。ARGB1555 很可能是原生纹理格式。
+graphic.pixFormat_argb1555: ARGB1555
+graphic.pixFormat_rgb565: RGB565
+graphic.debug: API 调试
+graphic.debug_descr: 启用调试消息。正常使用时应关闭。至少在使用 DirectX 时，需要调试库。
+graphic.debug_none: 无
+graphic.debug_enabled: 启用（减少 OpenGL 输出）
+graphic.debug_debugContextEnabled: 创建 OpenGL 调试上下文
+control: 控制
+control_descr: 输入控制选项。
+control.clipCursor: 限制光标
+control.clipCursor_descr: 始终将光标限制在窗口的游戏区域内。否则，仅在按住鼠标按钮时才会限制。
+control.scrollActive: 滚动
+control.scrollActive_descr: 启用边缘滚动。
+control.margin: 外侧滚动范围
+control.margin_descr: 在未启用光标限制的窗口模式下，将滚动区域向外扩展的窗口像素数。
+control.padding: 内侧滚动范围
+control.padding_descr: 将滚动区域向内扩展的窗口像素数。
+tags.interface: 界面
+tags.tools: 工具

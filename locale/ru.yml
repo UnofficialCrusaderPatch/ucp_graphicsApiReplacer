@@ -1,0 +1,70 @@
+general: Graphics API Replacer
+general_descr: 'Модуль заменяет систему вывода изображения более современной, использующей DirectX или OpenGL. Это
+  может улучшить работу, например, с программами записи видео. Саму отрисовку по-прежнему выполняет процессор, поэтому
+  прироста производительности ожидать не следует.
+
+  Эти настройки задают разрешение окна, а параметры в игре — разрешение отрисовки. Соотношение сторон определяется
+  игровым разрешением, поэтому могут появляться чёрные полосы, видимые на записи.'
+window: Настройки окна
+window_descr: Общие настройки окна.
+window.type: Режим
+window.type_descr: Используемый режим окна.
+window.type_window: Окно
+window.type_borderlessWindow: Окно без рамки
+window.type_borderlessFullscreen: Полноэкранный без рамки
+window.width: Ширина
+window.width_descr: Ширина окна игры.
+window.height: Высота
+window.height_descr: Высота окна игры.
+window.pos: Положение
+window.pos_descr: Начальное положение окна.
+window.pos_middle: По центру
+window.pos_topLeft: Слева сверху
+window.pos_bottomLeft: Слева снизу
+window.pos_topRight: Справа сверху
+window.pos_bottomRight: Справа снизу
+window.continueOutOfFocus: Продолжать без фокуса
+window.continueOutOfFocus_descr: Определяет поведение игры при потере фокуса окна.
+window.continueOutOfFocus_pause: Пауза
+window.continueOutOfFocus_continue: Продолжать
+window.continueOutOfFocus_render: Продолжать с отрисовкой
+window.minimizeOnLostFocus_descr: Сворачивать окно при потере фокуса.
+graphic: Настройки графического API
+graphic_descr: Настройки DirectX и OpenGL.
+graphic.api: Графический API
+graphic.api_descr: Используемый графический API.
+graphic.api_DirectX: DirectX 11
+graphic.api_OpenGL: OpenGL (устаревший)
+graphic.filterLinear: Линейная фильтрация
+graphic.filterLinear_descr: Применяет линейный фильтр текстур. Может улучшить изображение, если разрешения окна
+  и отрисовки различаются.
+graphic.vsync: VSync
+graphic.vsync_descr: Включает вертикальную синхронизацию и ограничивает частоту кадров частотой экрана. Влияет на
+  прокрутку карты, которая частично зависит от кадров.
+graphic.waitWithGLFinish: Ожидать через glFinish
+graphic.waitWithGLFinish_descr: Вызывает glFinish после смены экранных буферов при использовании OpenGL. Может не
+  оказывать никакого эффекта. В дальнейшем настройка может быть удалена.
+graphic.pixFormat: Формат пикселей
+graphic.pixFormat_descr: Цветовой формат пикселей. Изображение всё равно преобразуется в 32-битный RGBA, но этот
+  выбор задаёт параметр программной отрисовки. ARGB1555, вероятно, является исходным форматом текстур.
+graphic.pixFormat_argb1555: ARGB1555
+graphic.pixFormat_rgb565: RGB565
+graphic.debug: Отладка API
+graphic.debug_descr: Включает отладочные сообщения. Для обычной игры следует отключить. Как минимум для DirectX
+  нужны отладочные библиотеки.
+graphic.debug_none: Нет
+graphic.debug_enabled: Включено (сокращённый вывод для OpenGL)
+graphic.debug_debugContextEnabled: Создать отладочный контекст OpenGL
+control: Управление
+control_descr: Настройки устройств ввода.
+control.clipCursor: Ограничить курсор
+control.clipCursor_descr: Постоянно ограничивает курсор игровой областью окна. Иначе это происходит только при удержании
+  кнопки мыши.
+control.scrollActive: Прокрутка
+control.scrollActive_descr: Включает прокрутку у края экрана.
+control.margin: Внешняя зона прокрутки
+control.margin_descr: Расширение зоны прокрутки наружу в пикселях окна для режимов без активного ограничения курсора.
+control.padding: Внутренняя зона прокрутки
+control.padding_descr: Расширение зоны прокрутки внутрь в пикселях окна.
+tags.interface: Интерфейс
+tags.tools: Инструменты

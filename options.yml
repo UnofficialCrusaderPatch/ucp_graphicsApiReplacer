@@ -4,7 +4,7 @@ options:
     header: "{{general}}"
     text: "{{general_descr}}"
     hasHeader: true
-    category: [Graphics API Replacer]
+    category: ['{{general}}']
     children:
       - display: GroupBox
         header: "{{window}}"
