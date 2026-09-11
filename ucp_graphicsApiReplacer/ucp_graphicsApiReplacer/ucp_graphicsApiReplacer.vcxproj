@@ -161,6 +161,7 @@
     <ClInclude Include="crusaderGraphicsApiReplacer.h" />
     <ClInclude Include="framework.h" />
     <ClInclude Include="pch.h" />
+    <ClInclude Include="surfaceCopy.h" />
     <ClInclude Include="openGLCore.h" />
   </ItemGroup>
   <ItemGroup>

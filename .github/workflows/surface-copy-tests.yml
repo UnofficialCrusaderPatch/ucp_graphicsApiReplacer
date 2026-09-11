@@ -1,0 +1,19 @@
+name: Surface copy tests
+on:
+  push:
+    paths: ['tests/**', '**/surfaceCopy.h', '**/fakeDDSurfaces.cpp', '**/directX11Core.cpp', '.github/workflows/surface-copy-tests.yml']
+  pull_request:
+    paths: ['tests/**', '**/surfaceCopy.h', '**/fakeDDSurfaces.cpp', '**/directX11Core.cpp', '.github/workflows/surface-copy-tests.yml']
+permissions:
+  contents: read
+jobs:
+  test:
+    strategy:
+      matrix:
+        os: [ubuntu-latest, windows-latest]
+    runs-on: ${{ matrix.os }}
+    steps:
+      - uses: actions/checkout@v4
+      - run: cmake -S tests -B build/surface-copy
+      - run: cmake --build build/surface-copy --config Release
+      - run: ctest --test-dir build/surface-copy -C Release --output-on-failure
